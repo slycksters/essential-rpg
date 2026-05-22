@@ -20,6 +20,14 @@ export const NavbarSection = () => {
   const handleScroll = (e, targetId) => {
     e.preventDefault();
 
+    if (targetId === 'landing') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+      return;
+    }
+
     const element = document.getElementById(targetId);
 
     if (element) {
