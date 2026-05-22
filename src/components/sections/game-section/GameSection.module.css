@@ -1,0 +1,136 @@
+.gameSection {
+  background-color: var(--color-bg-panel);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.gameSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url('../../../assets/img/landing-background.jpg');
+  background-size: cover;
+  background-position: center;
+
+  /* KEY CHANGE: flatten contrast */
+  filter: grayscale(30%) contrast(70%) brightness(35%);
+
+  /* opacity: 0.8; */
+
+  transform: scale(1.05); /* avoids edge clipping */
+}
+
+.gameSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.gameDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameSectionContent {
+  position: relative;
+  z-index: 2;
+  text-shadow: var(--text-shadow-dark);
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+/* Game Details Section */
+/* Title */
+.gameTitle {
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 600;
+  text-shadow: var(--text-shadow-dark);
+
+  /* Make the text start at top */
+  display: flex;
+}
+
+.gameTitle span {
+  font-size: 60px;
+  margin-top: -5px;
+}
+
+/* Game Count */
+.gameCountContainer {
+  background-color: var(--color-smoke-dark);
+  border-radius: 4px;
+  box-shadow: var(--shadow-dark);
+  padding: 32px 64px;
+  text-align: center;
+}
+
+.gameCountContainer p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.buttonsContainer {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+}
+
+.playButton, .viewButton {
+  cursor: pointer;
+  padding: 18px 40px;
+  width: 186px;
+  border-radius: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.playButton {
+  background: var(--gradient-gold);
+  border: 1px solid var(--color-border-gold);
+  color: var(--color-text-dark);
+}
+
+.playButton:hover {
+  box-shadow: var(--shadow-gold);
+}
+
+.viewButton {
+  background: var(--gradient-dark);
+  border: 1px solid var(--color-smoke-dark);
+  color: var(--color-text-primary);
+  font-size: 13.6px;
+  font-weight: normal;
+  letter-spacing: 0.816px;
+  text-align: center;
+}
+
+.viewButton:hover {
+  box-shadow: var(--shadow-dark);
+}
+
+/* Image Section */
+.gameImageContainer {
+  border: 2px solid var(--color-smoke-light);
+  box-shadow: var(--shadow-dark);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.gameImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,47 @@
+.community {
+  background-color: var(--color-bg-primary);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  margin-top: -20px;
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.socialButton {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-smoke-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 30px;
+  transition: all 0.2s ease-in-out;
+
+  /* center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialButton:hover {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-smoke-medium);
+}
+
+.socialIcon {
+  font-size: clamp(1.5rem, 6vw, 3.2rem);
+}
+
+.socialCount {
+  color: #ffffff;
+  font-size: clamp(16px, 4.5vw, 26px);
+  font-weight: 800;
+}
+
+.socialTitle {
+  color: var(--color-text-muted);
+  font-size: clamp(10px, 3vw, 14px);
+  text-transform: uppercase;
+}

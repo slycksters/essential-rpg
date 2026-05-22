@@ -1,0 +1,164 @@
+/* =========================================
+   Medieval / Dark Fantasy Color Palette
+   Inspired by the uploaded UI references
+   ========================================= */
+
+:root {
+  /* ===== Primary Backgrounds ===== */
+  --color-bg-main: #0b0908;
+  --color-bg-secondary: #14110f;
+  --color-bg-elevated: #1b1714;
+  --color-bg-panel: #241d18;
+
+  /* ===== Brown / Leather Tones ===== */
+  --color-brown-dark: #2b2118;
+  --color-brown-medium: #4a3422;
+  --color-brown-light: #6a4a31;
+  --color-bronze-muted: #7b5a3d;
+
+  /* ===== Gold / Accent ===== */
+  --color-gold-primary: #c89b5d;
+  --color-gold-soft: #d7b47a;
+  --color-gold-bright: #f0d2a2;
+  --color-gold-dim: #9a7444;
+
+  /* ===== Ash / Smoke ===== */
+  --color-smoke-dark: #2a2623;
+  --color-smoke-medium: #4b443f;
+  --color-smoke-light: #7a7067;
+  --color-fog: #a99d91;
+
+  /* ===== Text ===== */
+  --color-text-primary: #f5efe6;
+  --color-text-secondary: #cfc2b2;
+  --color-text-muted: #8f8172;
+  --color-text-dark: #1a120d;
+
+  /* ===== Borders ===== */
+  --color-border-dark: #32271f;
+  --color-border-light: #70553a;
+  --color-border-gold: #b88a4e;
+
+  /* ===== Special Fantasy Accents ===== */
+  --color-fire: #8f3e22;
+  --color-ember: #c15b2c;
+  --color-shadow-red: #3b1612;
+  --color-royal-purple: #57415d;
+
+  /* ===== Effects ===== */
+  --shadow-dark:
+    0 10px 30px rgba(0, 0, 0, 0.6);
+
+  --shadow-gold:
+    0 0 15px rgba(200, 155, 93, 0.25);
+
+  --text-shadow-dark:
+    4px 4px 8px rgba(0, 0, 0, 0.6);
+
+  --gradient-dark:
+    linear-gradient(
+      180deg,
+      #1a1410 0%,
+      #0b0908 100%
+    );
+
+  --gradient-gold:
+    linear-gradient(
+      135deg,
+      #f0d2a2 0%,
+      #c89b5d 45%,
+      #7b5a3d 100%
+    );
+
+  --gradient-panel:
+    linear-gradient(
+      145deg,
+      #241d18 0%,
+      #14110f 100%
+    );
+}
+
+/* =========================================
+   Example Global Styling
+   ========================================= */
+
+body {
+  background: var(--color-bg-main);
+  color: var(--color-text-primary);
+  font-family:
+    "Cinzel",
+    "Cormorant Garamond",
+    serif;
+}
+
+/* =========================================
+   Example Card / Panel
+   ========================================= */
+
+.fantasy-panel {
+  background: var(--gradient-panel);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-dark);
+  border-radius: 12px;
+  color: var(--color-text-primary);
+}
+
+/* =========================================
+   Example Button
+   ========================================= */
+
+.fantasy-button {
+  background: var(--gradient-gold);
+  color: #1a120d;
+  cursor: pointer;
+  border: 1px solid var(--color-border-gold);
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.fantasy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* =========================================
+   Example Inputs
+   ========================================= */
+
+.fantasy-input {
+  background: rgba(20, 17, 15, 0.9);
+  border: 1px solid var(--color-border-dark);
+  color: var(--color-text-primary);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.fantasy-input:focus {
+  outline: none;
+  border-color: var(--color-border-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+/* =========================================
+   Utility Classes
+   ========================================= */
+
+.text-gold {
+  color: var(--color-gold-primary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-fantasy {
+  background: var(--gradient-dark);
+}
+
+.border-gold {
+  border-color: var(--color-border-gold);
+}
