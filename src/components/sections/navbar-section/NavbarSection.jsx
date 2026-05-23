@@ -33,7 +33,7 @@ export const NavbarSection = () => {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'center',
       });
     }
   };
