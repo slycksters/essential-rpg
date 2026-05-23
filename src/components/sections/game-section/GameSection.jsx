@@ -1,39 +1,15 @@
 import clsx from 'clsx';
 import styles from './GameSection.module.css';
 import { cursedBladeBackgroundImg } from '../../../assets';
-import { formatNumber } from '../../../utils';
+import { formatNumber, openGameInRoblox } from '../../../utils';
 
 // To Fetch Cursed Blade Game Visits
 // https://games.roblox.com/v1/games?universeIds=9501409571
 
 export const GameSection = () => {
-  const openGameInRoblox = (placeId) => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    if (/android/i.test(userAgent)) {
-      // Android device
-      const intentUrl = `intent://placeId=${placeId}#Intent;scheme=roblox;package=com.roblox.client;end`;
-      window.location.href = intentUrl;
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      // iOS device
-      const appUrl = `roblox://placeId=${placeId}`;
-      const fallbackUrl = `https://www.roblox.com/games/${placeId}`;
-
-      window.location.href = appUrl;
-      setTimeout(() => {
-        window.location.href = fallbackUrl;
-      }, 1500);
-    } else {
-      // Desktop fallback
-      window.location.href = `roblox://placeId=${placeId}`;
-    }
-  };
-
   return (
     <div className={clsx(styles.gameSection, 'px-6 sm:px-40 py-16 sm:py-32')} id="game">
       <div className={styles.gameSectionContent}>
-        {/* <p className={styles.title}>Games</p> */}
-
         <div
           className={clsx(
             styles.game,
@@ -45,6 +21,7 @@ export const GameSection = () => {
               <p className={styles.gameTitle}>
                 <span>C</span>ursed <span className="ml-4">B</span>lade
               </p>
+              <small className={styles.gameDescription}>A fantasy RPG universe where legends are forged through battle, exploration, and progression.</small>
             </div>
 
             <div className={styles.gameCountContainer}>
