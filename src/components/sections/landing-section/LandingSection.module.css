@@ -10,6 +10,9 @@
   position: relative;
   overflow: hidden;
 
+  padding-left: 6px;
+  padding-right: 6px;
+
   background-color: #120e0b; /* deeper, less warm */
 }
 
@@ -45,7 +48,7 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: clamp(2rem, 8vw, 6rem);
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
@@ -71,6 +74,8 @@
 }
 
 .subtitle {
+  font-size: clamp(10px, 1vw, 16rem);
+  text-align: center;
   text-shadow: var(--text-shadow-dark);
   z-index: 2;
 }
@@ -105,5 +110,25 @@
 @media (min-width: 1024px) {
   .landing {
     height: 75vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    aspect-ratio: 16 / 9;
+    height: 50vh;
+  }
+
+  .subtitle {
+    max-width: 45ch;
+  }
+
+  .actions {
+    margin-top: 40px;
+  }
+
+  .playButton {
+    padding: 10px 20px;
+    font-size: 10px;
   }
 }

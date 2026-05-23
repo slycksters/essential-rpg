@@ -21,7 +21,7 @@ export const GameSection = () => {
               <p className={styles.gameTitle}>
                 <span>C</span>ursed <span className="ml-4">B</span>lade
               </p>
-              <small className={styles.gameDescription}>A fantasy RPG universe where legends are forged through battle, exploration, and progression.</small>
+              <p className={styles.gameDescription}>A fantasy RPG universe where legends are forged through battle, exploration, and progression.</p>
             </div>
 
             <div className={styles.gameCountContainer}>
