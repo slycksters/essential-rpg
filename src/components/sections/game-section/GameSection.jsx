@@ -3,23 +3,20 @@ import styles from './GameSection.module.css';
 import { cursedBladeBackgroundImg } from '../../../assets';
 import { formatNumber, openGameInRoblox } from '../../../utils';
 
-// To Fetch Cursed Blade Game Visits
-// https://games.roblox.com/v1/games?universeIds=9501409571
-
 export const GameSection = () => {
   return (
-    <div className={clsx(styles.gameSection, 'px-6 sm:px-40 py-16 sm:py-32')} id="game">
+    <div className={clsx(styles.gameSection, 'px-[6px] sm:px-16 lg:px-32 xl:px-40 py-16 sm:py-24 lg:py-32')} id="game">
       <div className={styles.gameSectionContent}>
         <div
           className={clsx(
             styles.game,
-            'grid grid-cols-1 lg:grid-cols-2 gap-10',
+            'grid grid-cols-1 lg:grid-cols-2 gap-10 items-center',
           )}
         >
           <div className={styles.gameDetails}>
             <div className={styles.gameTitleContainer}>
               <p className={styles.gameTitle}>
-                <span>C</span>ursed <span className="ml-4">B</span>lade
+                <span>C</span>ursed <span className="ml-2 sm:ml-4">B</span>lade
               </p>
               <p className={styles.gameDescription}>A fantasy RPG universe where legends are forged through battle, exploration, and progression.</p>
             </div>
@@ -48,7 +45,7 @@ export const GameSection = () => {
           </div>
 
           <figure className={styles.gameImageContainer}>
-            <img className={styles.gameImage} src={cursedBladeBackgroundImg} />
+            <img className={styles.gameImage} src={cursedBladeBackgroundImg} alt="Cursed Blade Background" />
           </figure>
         </div>
       </div>

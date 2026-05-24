@@ -4,9 +4,9 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   margin-top: -20px;
-  margin-bottom: 52px;
+  margin-bottom: clamp(32px, 5vw, 52px);
   text-align: center;
 }
 
@@ -15,10 +15,9 @@
   border: 1px solid var(--color-smoke-dark);
   border-radius: 4px;
   cursor: pointer;
-  padding: 30px;
+  padding: clamp(20px, 3vw, 30px);
   transition: all 0.2s ease-in-out;
 
-  /* center content */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,17 +30,17 @@
 }
 
 .socialIcon {
-  font-size: clamp(1.5rem, 6vw, 3.2rem);
+  font-size: clamp(2rem, 6vw, 3.2rem);
 }
 
 .socialCount {
   color: #ffffff;
-  font-size: clamp(16px, 4.5vw, 26px);
+  font-size: clamp(20px, 4.5vw, 26px);
   font-weight: 800;
 }
 
 .socialTitle {
   color: var(--color-text-muted);
-  font-size: clamp(10px, 3vw, 14px);
+  font-size: clamp(12px, 3vw, 14px);
   text-transform: uppercase;
 }

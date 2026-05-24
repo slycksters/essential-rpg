@@ -10,10 +10,13 @@ export const CommunitySection = () => {
     roblox: 815720,
   });
 
+  // Fetch the count of roblox members
+    // 112107733863518 = Cursed Blade
+    // https://groups.roblox.com/v1/groups/440941144
+
   useEffect(() => {
     let isMounted = true;
 
-    // Fetch the discord members count
     fetch('https://discord.com/api/v9/invites/rdcuJbWWWw?with_counts=true')
       .then((res) => res.json())
       .then((data) => {
@@ -31,17 +34,13 @@ export const CommunitySection = () => {
           }));
       });
 
-    // Fetch the count of roblox members
-    // 112107733863518 = Cursed Blade
-    // https://groups.roblox.com/v1/groups/440941144
-
     return () => {
       isMounted = false;
     };
   }, []);
 
   return (
-    <div className={clsx(styles.community, 'px-6 sm:px-16 py-16 sm:py-32')} id="community">
+    <div className={clsx(styles.community, 'px-[6px] sm:px-16 lg:px-32 xl:px-40 py-16 sm:py-24 lg:py-32')} id="community">
       <p className={styles.title}>Join our Community</p>
 
       <div

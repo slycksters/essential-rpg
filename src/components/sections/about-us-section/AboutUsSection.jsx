@@ -3,7 +3,7 @@ import styles from './AboutUsSection.module.css';
 
 export const AboutUsSection = () => {
   return (
-    <div className={clsx(styles.aboutUs, 'px-6 sm:px-16 py-16 sm:py-32')} id="about-us">
+    <div className={clsx(styles.aboutUs, 'px-[6px] sm:px-16 lg:px-32 xl:px-40 py-16 sm:py-24 lg:py-32')} id="about-us">
       <div>
         <p className={styles.title}>About Us</p>
 
@@ -24,7 +24,7 @@ export const AboutUsSection = () => {
           and choice shapes a living adventure beyond imagination."
         </p>
 
-        <p className="text-center">
+        <p className={clsx(styles.signature, 'text-center')}>
           - <span className={styles.organizationName}>Essential RPG</span> Team
         </p>
       </div>

@@ -40,7 +40,7 @@ export const NavbarSection = () => {
 
   return (
     <header
-      className={clsx(styles.navbar, isScrolled && styles.navbarScrolled)}
+      className={clsx(styles.navbar, isScrolled && styles.navbarScrolled, 'px-[6px] sm:px-16 lg:px-32 xl:px-40')}
     >
       <ul className={styles.navbarList}>
         <li

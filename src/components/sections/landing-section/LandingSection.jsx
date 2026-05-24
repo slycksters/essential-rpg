@@ -1,9 +1,10 @@
+import clsx from 'clsx';
 import { openGameInRoblox } from '../../../utils';
 import styles from './LandingSection.module.css';
 
 export const LandingSection = () => {
   return (
-    <div className={styles.landing} id="landing">
+    <div className={clsx(styles.landing, 'px-[6px] sm:px-16 lg:px-32 xl:px-40')} id="landing">
       <p className={styles.title}>Essential RPG</p>
 
       <p className={styles.subtitle}>

@@ -2,11 +2,12 @@
   background-color: transparent;
   border-bottom: 1px solid transparent;
 
-  padding: 20px;
+  /* Fluid vertical padding, horizontal handled by Tailwind */
+  padding-top: clamp(16px, 2vw, 24px);
+  padding-bottom: clamp(16px, 2vw, 24px);
 
   position: sticky;
   top: 0;
-
   z-index: 1000;
 
   transition:
@@ -18,20 +19,19 @@
 .navbarScrolled {
   background-color: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-smoke-dark);
-
-  /* optional */
   backdrop-filter: blur(10px);
 }
 
 .navbarList {
   display: flex;
-  gap: 15px;
+  gap: clamp(12px, 3vw, 24px);
   justify-content: end;
 }
 
 .navbarListItem {
   cursor: pointer;
   font-family: var(--font-display);
+  font-size: clamp(14px, 1.5vw, 16px);
   transition: all 0.2s ease-in-out;
 }
 
